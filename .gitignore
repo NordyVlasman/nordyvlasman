@@ -4,6 +4,7 @@
 /.swiftpm
 /*.xcodeproj
 .publish
+./Output
 # Logs
 logs
 *.log
