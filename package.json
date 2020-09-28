@@ -4,12 +4,13 @@
     "build": "gulp css --silent"
   },
   "private": true,
-  "license" : "GNU General Public License (GPL)",
+  "license": "GNU General Public License (GPL)",
   "dependencies": {
     "@tailwindcss/typography": "^0.2.0",
     "@tailwindcss/ui": "^0.6.2",
     "gulp-postcss": "^8.0.0",
     "postcss-import": "^12.0.1",
+    "postcss-selector-parser": "^6.0.4",
     "precss": "^4.0.0",
     "tailwindcss": "^1.6.0"
   },

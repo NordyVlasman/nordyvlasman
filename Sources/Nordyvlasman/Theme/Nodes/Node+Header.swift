@@ -15,10 +15,13 @@ extension Node where Context == HTML.BodyContext {
             .wrapper(
                 .nav(
                     .class("site-name"),
-                    .a(
-                        .href("/"),
-                        .text(context.site.name),
-                        .class("font-bold text-blue-500 text-2xl hover:text-blue-700")
+                    .div(
+                        .a(
+                            .text("Nordy Vlasman"),
+                            .class("bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500"),
+                            .href("/")
+                        ),
+                        .class("font-bold text-2xl")
                     )
                 )
             ),
@@ -26,7 +29,7 @@ extension Node where Context == HTML.BodyContext {
                 .a(
                     .href("https://github.com/NordyVlasman"),
                     .text("Github &rarr;"),
-                    .class("font-medium text-gray-500 hover:text-gray-700")
+                    .class("font-medium hover:text-gray-700 dark:typography:prose-dark")
                 ),
                 .class("text-base leading-5")
             ),
@@ -44,9 +47,9 @@ extension Node where Context == HTML.BodyContext {
             ),
             .p(
                 .text(description),
-                .class("text-lg leading-7 text-gray-500")
+                .class("text-lg leading-7 dark:typography:prose-dark")
             ),
-            .class("pt-6 pb-8 space-y-2 md:space-y-5")
+            .class("pt-6 pb-8 space-y-2 md:space-y-5 dark:typography:prose-dark")
         )
     }
 }

@@ -22,7 +22,7 @@ extension Node where Context == HTML.ListContext {
                         .p(
                             .text(DateFormatter.blog.string(from: item.date).capitalized)
                         ),
-                        .class("text-base leading-6 font-medium text-gray-500")
+                        .class("text-base leading-6 font-medium dark:typography:prose-dark")
                     )
                 ),
                 .wrapper(
@@ -37,11 +37,11 @@ extension Node where Context == HTML.ListContext {
                         ),
                         .p(
                             .text("Door: Nordy Vlasman"),
-                            .class("space-y-4 text-gray-700")
+                            .class("space-y-4 dark:typography:prose-dark")
                         ),
                         .wrapper(
                             .text(item.description),
-                            .class("prose max-w-none text-gray-500")
+                            .class("prose max-w-none dark:typography:prose-dark")
                         ),
                         .class("space-y-2")
                     ),
@@ -55,7 +55,7 @@ extension Node where Context == HTML.ListContext {
                     ),
                     .class("space-y-5 xl:col-span-3")
                 ),
-                .class("space-y-2 xl:grid xl:grid-cols-4 xl:space-y-9 xl:items-baseline")
+                .class("space-y-2 xl:grid xl:grid-cols-4 xl:space-y-9 xl:items-baseline dark:typography:prose-dark")
             ),
             .class("py-12")
         )
