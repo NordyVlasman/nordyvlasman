@@ -1,5 +1,5 @@
 ---
-date: 2020-09-30 12:30
+date: 2020-10-09 12:30
 description: Swift design patterns
 
 tags: Swift, Development, Structure
