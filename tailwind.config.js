@@ -2,9 +2,11 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const selectorParser = require("postcss-selector-parser");
 
 module.exports = {
+  dark: 'media',
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
+    darkModeVariant: true
   },
   purge: [
   ],
