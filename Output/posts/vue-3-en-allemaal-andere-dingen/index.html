@@ -1,0 +1,60 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"/><meta name="og:site_name" content="Nordy Vlasman"/><link rel="canonical" href="https://nordyvlasman.nl/posts/vue-3-en-allemaal-andere-dingen"/><meta name="twitter:url" content="https://nordyvlasman.nl/posts/vue-3-en-allemaal-andere-dingen"/><meta name="og:url" content="https://nordyvlasman.nl/posts/vue-3-en-allemaal-andere-dingen"/><title>Vue 3 en allemaal andere dingen | Nordy Vlasman</title><meta name="twitter:title" content="Vue 3 en allemaal andere dingen | Nordy Vlasman"/><meta name="og:title" content="Vue 3 en allemaal andere dingen | Nordy Vlasman"/><meta name="description" content="Een week vol knutselen met onder andere Vue 3, Swift en Laravel"/><meta name="twitter:description" content="Een week vol knutselen met onder andere Vue 3, Swift en Laravel"/><meta name="og:description" content="Een week vol knutselen met onder andere Vue 3, Swift en Laravel"/><meta name="twitter:card" content="summary"/><link rel="stylesheet" href="/styles.css" type="text/css"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="shortcut icon" href="/images/favicon.png" type="image/png"/><link rel="alternate" href="/feed.rss" type="application/rss+xml" title="Subscribe to Nordy Vlasman"/></head><body><div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0"><header class="flex justify-between items-center py-10"><div class="wrapper"><nav class="site-name"><div class="font-bold text-2xl"><a class="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500" href="/">Nordy Vlasman</a></div></nav></div><div class="text-base leading-5"><a href="https://github.com/NordyVlasman" class="font-medium hover:text-gray-700 dark:typography:prose-dark">Github &rarr;</a></div></header></div><div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0"><div class="pt-6 pb-8 space-y-2 md:space-y-5 dark:typography:prose-dark"><h1 class="text-2xl leading-9 font-extrabold text-gray-900 tracking-tight sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">Vue 3 en allemaal andere dingen</h1><p class="text-lg leading-7 dark:typography:prose-dark">Gepubliceerd op 9 October 2020</p></div><article class="break-words border-t border-solid py-12 prose prose-sm sm:prose-xl max-w-none dark:typography:prose-dark"><p>18 September was het dan zo ver. Vue 3 werd uitgebracht, met daarin als belangrijkste verandering de <a href="https://github.com/vuejs/composition-api">Composition Api</a>. Met deze verandering wordt het programmeren in Vue compleet veranderd, waar je voorheen de options api gebruikte met daarin de diverse functies. Maak je nu alles "zelf", je hebt dus geen data property meer maar Ref's. De werking van de composition api is redelijk te vergelijken met React.</p><p><strong>Voorbeeld Vue 3 Composition</strong></p><pre><code><div class="highlight"><span></span><span class="p">&lt;</span><span class="n">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="n">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="n">h1</span><span class="p">&gt;</span><span class="n">Counter</span><span class="o">&lt;/</span><span class="n">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="n">h3</span><span class="p">&gt;</span><span class="n">Current</span> <span class="bp">count</span><span class="p">:</span> <span class="p">{{</span> <span class="bp">count</span> <span class="p">}}</span><span class="o">&lt;/</span><span class="n">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="n">button</span> <span class="p">@</span><span class="n">click</span><span class="p">=</span><span class="s">&quot;decrement&quot;</span><span class="o">&gt;-&lt;/</span><span class="n">button</span><span class="p">&gt;</span> <span class="o">|</span> <span class="p">&lt;</span><span class="n">button</span> <span class="p">@</span><span class="n">click</span><span class="p">=</span><span class="s">&quot;increment&quot;</span><span class="o">&gt;+&lt;/</span><span class="n">button</span><span class="p">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">div</span><span class="p">&gt;</span>
+<span class="o">&lt;/</span><span class="n">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="n">script</span><span class="p">&gt;</span>
+<span class="kd">import</span> <span class="p">{</span> <span class="nc">ref</span> <span class="p">}</span> <span class="nc">from</span> <span class="err">&#39;</span><span class="nc">vue</span><span class="err">&#39;</span>
+<span class="n">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="n">setup</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">const</span> <span class="bp">count</span> <span class="p">=</span> <span class="n">ref</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">const</span> <span class="n">increment</span> <span class="p">=</span> <span class="p">()</span> <span class="p">=</span><span class="o">&gt;</span> <span class="p">{</span>
+      <span class="bp">count</span><span class="p">.</span><span class="n">value</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="p">}</span>
+
+    <span class="n">const</span> <span class="n">decrement</span> <span class="p">=</span> <span class="p">()</span> <span class="p">=</span><span class="o">&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="bp">count</span><span class="p">.</span><span class="n">value</span> <span class="p">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+      <span class="bp">count</span><span class="p">.</span><span class="n">value</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="bp">count</span><span class="p">,</span>
+      <span class="n">increment</span><span class="p">,</span>
+      <span class="n">decrement</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="o">&lt;/</span><span class="n">script</span><span class="p">&gt;</span>
+</div></code></pre><p><strong>Voorbeeld Vue 2 Options API</strong></p><pre><code><div class="highlight"><span></span><span class="p">&lt;</span><span class="n">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="n">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="n">h1</span><span class="p">&gt;</span><span class="n">Counter</span><span class="o">&lt;/</span><span class="n">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="n">h3</span><span class="p">&gt;</span><span class="n">Current</span> <span class="bp">count</span><span class="p">:</span> <span class="p">{{</span> <span class="bp">count</span> <span class="p">}}</span><span class="o">&lt;/</span><span class="n">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="n">button</span> <span class="p">@</span><span class="n">click</span><span class="p">=</span><span class="s">&quot;decrement&quot;</span><span class="o">&gt;-&lt;/</span><span class="n">button</span><span class="p">&gt;</span> <span class="o">|</span> <span class="p">&lt;</span><span class="n">button</span> <span class="p">@</span><span class="n">click</span><span class="p">=</span><span class="s">&quot;increment&quot;</span><span class="o">&gt;+&lt;/</span><span class="n">button</span><span class="p">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">div</span><span class="p">&gt;</span>
+<span class="o">&lt;/</span><span class="n">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="n">script</span><span class="p">&gt;</span>
+<span class="n">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="n">data</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="bp">count</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+
+  <span class="n">methods</span><span class="p">:</span> <span class="p">{</span>
+    <span class="n">decrement</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">this</span><span class="p">.</span><span class="bp">count</span> <span class="p">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+      <span class="n">this</span><span class="p">.</span><span class="bp">count</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="p">},</span>
+
+    <span class="n">increment</span><span class="p">()</span> <span class="p">{</span>
+      <span class="n">this</span><span class="p">.</span><span class="bp">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="o">&lt;/</span><span class="n">script</span><span class="p">&gt;</span>
+</div></code></pre><p>Zoals je hierboven ziet, is er genoeg veranderd. Naar mijn mening is dit goed. Voornamelijk omdat je nu je component methods kan verdelen in extra bestanden. Hierdoor hou je specifieke functions gescheiden en blijft je bestand een stuk kleiner. Daarnaast is de composition api ook een verbetering voor Typescript, wat eerder nog een beetje hacky leek, is nu veranderd naar een veel logischere versie.</p><blockquote><p>Voor meer informatie over Vue 3 kijk vooral even hier: <a href="https://www.youtube.com/watch?v=WLpLYhnGqPA" target="_blank">https://www.youtube.com/watch?v=WLpLYhnGqPA</a></p></blockquote></article></div></body></html>
