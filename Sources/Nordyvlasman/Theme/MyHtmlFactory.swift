@@ -36,6 +36,7 @@ struct MyHtmlFactory<Site: Website>: HTMLFactory {
             .head(for: index, on: context.site),
             
             .body(
+                .class("bg-white dark:bg-gray-800"),
                 .wrapper(
                     .siteHeader(for: context),
                     .class("max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0")
@@ -65,6 +66,7 @@ struct MyHtmlFactory<Site: Website>: HTMLFactory {
             .head(for: item, on: context.site),
             
             .body(
+                .class("bg-white dark:bg-gray-800"),
                 .wrapper(
                     .siteHeader(for: context),
                     .class("max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0")
@@ -74,7 +76,7 @@ struct MyHtmlFactory<Site: Website>: HTMLFactory {
                     .pageHeader(title: item.title, description: "Gepubliceerd op " + DateFormatter.blog.string(from: item.date).capitalized),
                     .article(
                         .contentBody(item.body),
-                        .class("break-words border-t border-solid py-12 prose prose-sm sm:prose-xl max-w-none dark:typography:prose-dark")
+                        .class("break-words border-t border-solid py-12 prose prose-sm sm:prose-xl max-w-none dark:prose-dark")
                     ),
                     .class("max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0")
                 )

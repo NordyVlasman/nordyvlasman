@@ -80,4 +80,4 @@ Zoals je hierboven ziet, is er genoeg veranderd. Naar mijn mening is dit goed. V
 > Voor meer informatie over Vue 3 kijk vooral even hier: <a href="https://www.youtube.com/watch?v=WLpLYhnGqPA" target="_blank">https://www.youtube.com/watch?v=WLpLYhnGqPA</a>
 
 ## Knutseltijd met Swift
-Jawel, ik ben ondertussen al 2 vrijdagen bezig geweest met mijn Declarative UI package. Het doel hiervan is om mijn Backend data (JSON) over te zetten naar SwiftUI. Hiermee wil ik eigenlijk leren hoe ik een swift package moet maken met daarin de juiste structuur. Best wel een gedoe hoor
+Jawel, ik ben ondertussen al 2 vrijdagen bezig geweest met mijn Declarative UI package. Het doel hiervan is om mijn Backend data (JSON) over te zetten naar SwiftUI. Hiermee wil ik eigenlijk leren hoe ik een swift package moet maken met daarin de juiste structuur. Best wel een gedoe hoor. Maar hierover later een kee meer.
