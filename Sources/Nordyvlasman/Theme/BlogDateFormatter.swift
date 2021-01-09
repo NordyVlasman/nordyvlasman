@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  
+//  BlogDateFormatter.swift
+//
 //
 //  Created by Nordy Vlasman on 16/09/2020.
 //
