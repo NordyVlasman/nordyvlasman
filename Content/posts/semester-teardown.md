@@ -1,5 +1,5 @@
 ---
-date: 2020-09-22 12:30
+date: 2021-01-11 12:00
 description: Wow, dat was best raar..
 
 tags: Semester, Swift, AR
@@ -28,3 +28,9 @@ De grootste uitdaging binnen het maken van een AR app in SwiftUI was de communic
 > Als ik terugkijk naar deze oplossing had ik het anders gedaan. Ik zou gebruik maken van UIKit omdat de memory management hierin een stuk beter geregeld is. Daarnaast zou ik ook mijn basis beter hebben ingericht als ik wist hoeveel werk het uiteindelijk kostte om dit allemaal te refactoren. Raymond noemde dit Technical Depth, en als ik erzo naar kijk ben ik het met 'm eens.
 
 Het maken van een AR app was erg leuk, vooral tijdens het ontwikkelen van de kleine interactie prototypes. Op dat moment had ik het gevoel dat ik toch wel iets kon maken. Dat maakte mij trots en gaf mij motivatie.
+
+## En nog meer
+Natuurlijk heb ik ook nog veel meer dingen gedaan dit semester. Ik ben bezig geweest met mijn hobby projecten waar ik onder andere een REST Api heb gemaakt. Dit was leuk om te doen omdat ik voor dit project de kans had genomen om te kijken naar een goed werkend structuur voor de backend.
+Hierdoor kon ik mijn code met een grote hoeveelheid verminderen. Daar word ik zelf erg blij van.
+
+Al met al was het een leuk en leerzaam semester. Ik kijk nu al uit naar de volgende waarin ik mij wil gaan focussen op andere talen en misschien moet ik eens een moment nemen om mijn eigen site om te gooien.. Ooit.
