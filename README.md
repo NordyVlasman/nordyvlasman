@@ -1,5 +1,5 @@
 ### Hey 👋
-#### My name is Nordy, I'm a software developer and student from The Netherlands 🇳🇱 and I love programming.
+My name is Nordy, I'm a software developer and student from The Netherlands 🇳🇱 and I love programming.
 
 
 ### Some links
