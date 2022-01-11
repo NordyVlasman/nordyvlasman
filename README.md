@@ -6,5 +6,3 @@ My name is Nordy, I'm a software developer and student from The Netherlands 🇳
 So yeah, I work on a lot of things at the moment. From hobby projects to work stuff. Sometimes I like to write about it, you can check the following links to see some writing.
 
 - <a href="https://nordyvlasman.nl">My website</a> 🌐
-
-[![Nordy's GitHub stats](https://github-readme-stats.vercel.app/api?username=nordyvlasman&count_private=true)](https://github.com/anuraghazra/github-readme-stats)
